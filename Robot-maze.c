@@ -8,6 +8,7 @@
 
     int printsolution(){
         int i,j ;
+        printf("\nYES \n%d \n",count);
         for(i=0;i<count;i++){
             printf("%d,%d\n",x[i],y[i]);
         }
@@ -27,9 +28,9 @@
                     y[count] = j ;
                     count++ ;
                     //printf("\n%d,%d",i,j);
-                if(findpath(r,c,matrix,i,j+1)){
+                if(findpath(r,c,matrix,i,j+1))
                     return 1;
-                }
+
                 count-- ;
             }
             //case 2 go down
@@ -38,9 +39,9 @@
                     y[count] = j ;
                     count++ ;
                     //printf("\n%d,%d",i,j);
-                if(findpath(r,c,matrix,i+1,j)){
+                if(findpath(r,c,matrix,i+1,j))
                     return 1;
-                }
+
                 count-- ;
             }
             //case 3 move left
@@ -49,9 +50,9 @@
                     y[count] = j ;
                     count++ ;
                     //printf("\n%d,%d",i,j);
-                if(findpath(r,c,matrix,i-1,j)){
+                if(findpath(r,c,matrix,i-1,j))
                     return 1;
-                }
+
                 count-- ;
             }
             //case 4 move up
@@ -60,9 +61,9 @@
                     y[count] = j ;
                     count++ ;
                    // printf("\n%d,%d",i,j);
-                if(findpath(r,c,matrix,i,j-1)){
+                if(findpath(r,c,matrix,i,j-1))
                     return 1;
-                }
+
                 count--;
             }
         return 0;
@@ -90,13 +91,12 @@
            scanf("%d",&xe);
            scanf("%d",&ye);
 
-           if(findpath(r,c,matrix,xs,ys) == 1){
-                printf("\nYES \n%d \n",count);
-               printsolution();
-           }
-           else{
+
+           if(findpath(r,c,matrix,xs,ys)){
+                printsolution();
+           }else
                 printf("NOT POSSIBLE\n");
-           }
+
 
         return 0;
     }
