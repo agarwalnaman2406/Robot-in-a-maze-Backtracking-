@@ -1,0 +1,172 @@
+You are asked to design a robot which can navigate in a maze. The maze consists of both free path and obstacles. Your robot starts from a given start point and must navigate to a given end point. The robot should be able to go forwards, backwards, left and right.
+
+
+
+Briefly explain the following:
+
+1. What sensors you need and Why
+
+2. Navigation Algorithm
+
+
+
+What changes would you need to make in your design if the robot needs to naviagte under special terrain conditions like -
+
+A: Rough Terrain (Ex. In an uneven road)
+
+B: Terrain with low visibility (Ex. At Night, In a Tunnel etc.)
+
+
+
+NOTE: If you think any information is incomplete, please make your own assumptions and state them.
+
+
+
+
+
+Details of the Navigation Algorithm
+
+Given:
+
+ - a rectangular maze (m rows x n columns) consisting of 0's and 1's with
+
+	= obstacles are defined as 0
+
+	= free path are defined as 1
+
+ - start point in the form of coordinates (Xs,Ys) with respect to upper left corner as origin (1,1)
+
+ - End point in the form of coordinates (Xe,Ye) with respect to upper left corner as origin (1,1)
+
+
+
+Constraints:
+
+ - movement of robot is restricted to Forward, Backward, Left and Right on free path only.
+
+
+
+Task:
+
+ - Find a path from (Xs,Ys) to (Xe,Ye) in the form of list of coordinates from Start to End coordinate.
+
+ - Output NO if no path exists
+
+ - Code the algorithm in C/C++
+
+
+
+ Your code should be able to take the following inputs:
+
+ 1. Vakue of m and n (dimensions of the maze)
+
+ 2. The maze in the form of a rectangular matrix of 0 and 1
+
+ 3. Start co-ordinate (Xs, Ys)
+
+ 4. End co-ordinate (Xe, Ye)
+
+ 
+
+ Your code should Output the following:
+
+ 1. NO, if there exists no path from start to end
+
+	YES, if there exists at least one path from start to end
+
+ 2. If YES, then the length of the path (k)
+
+ 3. If YES, also print the co-ordinates of each point of the path. 
+
+ 
+
+ 
+
+Input format
+
+m n
+
+0 1 0 ... 1
+
+1 0 1 ... 0
+
+.
+
+.
+
+.
+
+0 0 0 ... 1
+
+Xs Ys
+
+Xe Ye
+
+
+
+Output format
+
+YES
+
+k
+
+x1 y1
+
+x2 y2
+
+x3 y3
+
+.
+
+.
+
+.
+
+xk yk
+
+
+
+Example:
+
+Input:
+
+4 6
+
+0 1 0 0 1 0
+
+0 1 0 1 1 0
+
+0 1 1 1 0 1
+
+1 0 0 1 1 1
+
+1 2
+
+3 6
+
+
+
+Output:
+
+YES
+
+9
+
+1 2
+
+2 2
+
+3 2
+
+3 3
+
+3 4
+
+4 4
+
+4 5
+
+4 6
+
+3 6
+
